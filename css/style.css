@@ -116,15 +116,13 @@ header > * {
     font-size: var(--main-size);
     font-weight: bold;
   }
-
-
 }
 .blog::after {
   content: "Blog";
   position: absolute;
   bottom: -30px;
   left: 10px;
- opacity: 0;
+  opacity: 0;
   visibility: hidden;
   background-color: #357ae8;
   color: white;
@@ -132,12 +130,11 @@ header > * {
   padding: 2px 20px;
   border-radius: 7px 1px 7px 1px;
   /* transition: opacity 0.5s; */
-    transition: opacity 0.5s, visibility 0.5s;
-
+  transition: opacity 0.5s, visibility 0.5s;
 }
 .blog:hover::after {
- opacity: 1;
- visibility: visible;
+  opacity: 1;
+  visibility: visible;
   transition: all 1s ease;
 }
 
@@ -157,7 +154,6 @@ header .navbar-nav li a::after {
 .navbar-nav li .active::after {
   width: 100%;
 }
-
 
 /* Hero Section */
 .hero {
@@ -653,9 +649,12 @@ header .navbar-nav li a::after {
         margin: 20px;
       }
     }
-    .hero .btn{
+    .hero .btn {
       margin-bottom: 5px;
       width: 60%;
+    }
+    .offcanvas.offcanvas-start {
+      width: 80% !important;
     }
   }
 
