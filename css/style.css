@@ -138,20 +138,17 @@ header > * {
 }
 
 /* nav for mobile */
-.navbar-nav .active {
+.mobil-nav .active{
   background-color: cadetblue;
   padding: 7px;
   border-radius: 3px;
   font-weight: 500;
   margin-left: 5px;
+
 }
-.navbar-nav li a {
-  border-radius: 3px;
-  padding: 2px;
-}
-.offcanvas.offcanvas-start {
-  margin: 0 !important;
-  border-right: none !important;
+.navbar-nav li a{
+   border-radius: 3px; 
+   padding: 2px;
 }
 
 /* end */
@@ -667,9 +664,7 @@ header .navbar-nav li a::after {
         margin: 20px;
       }
 
-      body {
-        margin: 0;
-      }
+
     }
     .hero .btn {
       margin-bottom: 5px;
@@ -677,8 +672,6 @@ header .navbar-nav li a::after {
     }
     .offcanvas.offcanvas-start {
       width: 80% !important;
-      margin: 0 !important;
-
     }
   }
 
@@ -709,11 +702,3 @@ header .navbar-nav li a::after {
     }
   }
 }
-
-/* @media (max-width: 576px) {
-  .offcanvas.offcanvas-start {
-    left: 0 !important;
-    right: 0 !important;
-    margin: 0 !important;
-  }
-} */
