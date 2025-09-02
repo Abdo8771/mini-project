@@ -1,0 +1,688 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+:root {
+  --main-color: #fff;
+  --main-size: 1em;
+}
+
+/* global styles */
+
+.main-title {
+  position: relative;
+  font-size: 2.5rem;
+  margin: 50px 0;
+}
+.main-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 1em;
+  height: 3px;
+  background: rgb(27, 104, 181);
+  transform: translate(-50%, 0);
+}
+section {
+  margin-top: 50px;
+  padding: 50px 0;
+  background: #f4f4f4;
+}
+
+/* styles for hover */
+.hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: #2c2c2c;
+  z-index: 0;
+  transition: width 0.6s ease;
+}
+
+.hover * {
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s ease, opacity 0.5s ease;
+}
+
+.hover:hover::after {
+  width: 100%;
+}
+
+.hover:hover h3 {
+  color: #fff;
+  font-weight: bold;
+}
+
+.hover:hover p {
+  color: #ddd;
+}
+
+.hover:hover a {
+  color: #00f;
+}
+
+.welcome-section p {
+  font-size: 1.2rem;
+  color: #666;
+}
+/* end rightHover styles */
+
+/* end of Global styles */
+
+/* styles for header */
+
+header {
+  background-image: url(../images/background/background1.webp);
+  background-size: cover;
+  height: 100vh !important;
+}
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+header > * {
+  position: relative;
+  z-index: 2;
+}
+
+.nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: 5em;
+  position: fixed;
+}
+.links ul li {
+  list-style: none;
+  position: relative;
+
+  a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: var(--main-size);
+    font-weight: bold;
+  }
+
+
+}
+.blog::after {
+  content: "Blog";
+  position: absolute;
+  bottom: -30px;
+  left: 10px;
+ opacity: 0;
+  visibility: hidden;
+  background-color: #357ae8;
+  color: white;
+  font-size: 1rem;
+  padding: 2px 20px;
+  border-radius: 7px 1px 7px 1px;
+  /* transition: opacity 0.5s; */
+    transition: opacity 0.5s, visibility 0.5s;
+
+}
+.blog:hover::after {
+ opacity: 1;
+ visibility: visible;
+  transition: all 1s ease;
+}
+
+header .navbar-nav li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #00f;
+  bottom: 0px;
+  left: 0px;
+  transition: width 0.5s ease;
+}
+.navbar-nav li a:hover::after {
+  width: 100%;
+}
+.navbar-nav li .active::after {
+  width: 100%;
+}
+
+
+/* Hero Section */
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h1 {
+    font-size: 3rem;
+    color: var(--main-color);
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: var(--main-color);
+  }
+}
+/* end header styles */
+
+/* styles for Welcome section */
+.welcome-section {
+  padding: 50px 0;
+  background: #f4f4f4;
+}
+
+.blok:hover h3 {
+  z-index: 3;
+  color: oldlace;
+}
+
+.welcome-section .blok {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+
+.welcome-section a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(26, 131, 244);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/*   end  welcome-section styles */
+
+/* Start Featured Works styles */
+
+.works {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.work-item img {
+  width: 100%;
+  height: auto;
+}
+
+.feature-Works .works .work-item {
+  position: relative;
+  padding: 20px;
+}
+.feature-Works .works .img-content {
+  position: absolute;
+  color: white;
+  padding: 10px;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.feature-Works .works .work-item:hover .img-content {
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+
+.work-item .icon i {
+  padding: 10px;
+  color: var(--main-color);
+  background-color: rgb(43, 119, 226);
+  border-radius: 5px;
+}
+
+/*   end  Featured Works styles */
+
+/* Start Offer Section styles */
+
+.offer-item {
+  background: #fff;
+  position: relative;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+.offer-item:hover {
+  transform: translateY(-10px);
+}
+.offer-item:hover i {
+  color: rgb(26, 131, 244);
+}
+
+/*   end  Offer Section styles */
+
+/* Styles for Why Choose Us Section */
+
+.why-choose-us h2 {
+  color: #222;
+}
+.choose-hr {
+  width: 50px;
+  border: 2px solid #6c63ff;
+  margin-left: 0;
+}
+/* .choose-img {
+  height: 320px;
+  object-fit: cover;
+} */
+/* .choose-indicators {
+  bottom: -30px;
+} */
+.carousel-indicators .active {
+  background-color: #6c63ff !important;
+}
+/* end Why Choose Us Section styles */
+
+/* Stats Section */
+.stats {
+  background: url("../images/background/background2.webp") no-repeat center
+    center/cover;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed; /* دى اللى بتعمل البارالاكس */
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.stats .overlay {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  width: 80%;
+}
+
+.stats .box i {
+  color: blue;
+  margin-bottom: 10px;
+}
+
+.stats .box h2 {
+  font-size: 28px;
+  margin: 5px 0;
+}
+
+.stats .box p {
+  font-size: 14px;
+}
+/* End Stats Section */
+
+/* Start Pricing Section */
+
+.pricingSection .card {
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+.pricingSection .hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0%;
+  background: #2c2c2c;
+  z-index: 0;
+  transition: height 0.6s ease;
+}
+.hover:hover::after {
+  height: 100%;
+}
+
+.pricingSection .card:hover {
+  transform: translateY(-10px);
+}
+
+.pricingSection .card-title {
+  font-size: 1.5rem;
+}
+
+.pricingSection .fee {
+  font-size: 1.2rem;
+  color: #333;
+  border: 1px solid #ccc;
+  width: fit-content;
+
+  padding: 40px 5px;
+  border-radius: 50%;
+  /* margin-top:0px; */
+}
+
+.pricingSection .card-text {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px;
+}
+
+/* End Pricing Section */
+
+/* Start Testimonial Section */
+.stats-section {
+  background: url("../images/background/background3.webp") no-repeat center
+    center/cover;
+  height: 250px;
+  background-attachment: fixed; /* دى اللى بتعمل البارالاكس */
+}
+.stats-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.stats-section .container {
+  position: relative;
+  z-index: 2;
+}
+.stats-card {
+  background: transparent;
+  color: #fff;
+  padding: 20px 10px;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+}
+.stats-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  float: left;
+}
+.stats-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 0 0 75px;
+}
+.stats-role {
+  display: block;
+  color: #6c63ff;
+  font-size: 1rem;
+  margin: 0 0 0 75px;
+}
+.stats-desc {
+  clear: both;
+  margin-top: 10px;
+  margin-left: 0;
+  font-size: 1rem;
+}
+/* End Testimonial Section */
+
+/* Start Team Section */
+
+.teams .img-content {
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  /* align-items: end; */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.teams .img-content a {
+  width: fit-content;
+  margin-left: 3px;
+}
+.teams .team-member:hover .img-content {
+  opacity: 1;
+  height: 100%;
+  transition: opacity 0.7s ease;
+  transition: height 1s ease;
+}
+.teams .img-content a {
+  color: white;
+  background-color: rgb(26, 131, 244);
+  padding: 5px 10px;
+  /* border-radius: 5px; */
+  /* margin: 0 5px; */
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+.teams .img-content a:hover {
+  background-color: rgb(43, 119, 226);
+  text-decoration: none;
+}
+
+.teams .team-member {
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.teams .team-member:hover {
+  transform: translateY(-10px);
+}
+
+.teams .team-member img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* End Team Section */
+
+/* Start Recent News Section */
+
+.recent-news .news-card {
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.recent-news {
+  p {
+    color: gray;
+  }
+
+  i {
+    color: rgb(27, 104, 181);
+  }
+}
+/* End Recent News Section */
+
+/* Start Footer Section */
+.footer-section {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+.footer-logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.footer-social {
+  margin-top: 30px;
+}
+.footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #5a96fa;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+.footer-icon:hover {
+  background: #357ae8;
+  color: #fff;
+}
+/* End Footer Section */
+
+/* Start Media Queries */
+@media (max-width: 1200px) {
+  .works {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .recent-news .news-card {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .works {
+    grid-template-columns: 1fr;
+  }
+  /* .stats .overlay {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  } */
+  .stats-section {
+    height: auto;
+    padding: 40px 0;
+  }
+  .footer-social {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2rem;
+    margin: 30px 0;
+  }
+  .recent-news .news-card {
+    padding: 15px;
+  }
+  .footer-logo {
+    font-size: 2rem;
+  }
+  .footer-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+  .stats-avatar {
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+  }
+  .stats-name,
+  .stats-role {
+    margin-left: 55px;
+  }
+  .feature-Works .works .work-item {
+    padding: 20px;
+    text-align: center;
+    /* img{
+  width: 70%; 
+  
+
+} */
+  }
+  @media (max-width: 576px) {
+    section,
+    .welcome-section,
+    .stats-section {
+      padding: 25px 0;
+    }
+    .main-title {
+      font-size: 1.3rem;
+      margin: 20px 0;
+    }
+    .recent-news .news-card {
+      padding: 10px;
+    }
+    .footer-logo {
+      font-size: 1.3rem;
+    }
+    .footer-social {
+      gap: 5px;
+    }
+    .footer-icon {
+      width: 30px;
+      height: 30px;
+      font-size: 1rem;
+    }
+    .stats-avatar {
+      width: 35px;
+      height: 35px;
+    }
+    .stats-name,
+    .stats-role {
+      margin-left: 40px;
+      font-size: 1rem;
+    }
+    .offer-padding {
+      padding: 20px !important;
+    }
+    .welcome-section .bloks {
+      flex-direction: column;
+      align-items: center;
+
+      .blok {
+        width: 80%;
+        margin: 20px;
+      }
+    }
+    .hero .btn{
+      margin-bottom: 5px;
+      width: 60%;
+    }
+  }
+
+  /* End Media Queries */
+
+  /* Custom styles for responsive navbar and sidebar */
+  .navbar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  .offcanvas {
+    background: #222;
+    color: #fff;
+  }
+  .offcanvas .offcanvas-title {
+    color: #5a96fa;
+  }
+  .offcanvas .nav-link {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  .offcanvas .nav-link.active,
+  .offcanvas .nav-link:hover {
+    color: #5a96fa;
+  }
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      display: none !important;
+    }
+  }
+}
