@@ -138,17 +138,16 @@ header > * {
 }
 
 /* nav for mobile */
-.mobil-nav .active{
+.mobil-nav .active {
   background-color: cadetblue;
   padding: 7px;
   border-radius: 3px;
   font-weight: 500;
   margin-left: 5px;
-
 }
-.navbar-nav li a{
-   border-radius: 3px; 
-   padding: 2px;
+.mobil-nav li a {
+  border-radius: 3px;
+  padding: 2px;
 }
 
 /* end */
@@ -663,8 +662,6 @@ header .navbar-nav li a::after {
         width: 80%;
         margin: 20px;
       }
-
-
     }
     .hero .btn {
       margin-bottom: 5px;
