@@ -129,7 +129,6 @@ header > * {
   font-size: 1rem;
   padding: 2px 20px;
   border-radius: 7px 1px 7px 1px;
-  /* transition: opacity 0.5s; */
   transition: opacity 0.5s, visibility 0.5s;
 }
 .blog:hover::after {
@@ -137,6 +136,22 @@ header > * {
   visibility: visible;
   transition: all 1s ease;
 }
+
+/* nav for mobile */
+.navbar-nav .active{
+  background-color: cadetblue;
+  padding: 7px;
+  border-radius: 3px;
+  font-weight: 500;
+  margin-left: 5px;
+
+}
+.navbar-nav li a{
+   border-radius: 3px; 
+   padding: 2px;
+}
+
+/* end */
 
 header .navbar-nav li a::after {
   content: "";
